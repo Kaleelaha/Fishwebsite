@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - OceanFresh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-fish"></i>
+                <span style="color: aliceblue;">OceanFresh</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" style="color: aliceblue;">Home</a></li>
+                <li><a href="shop.html" class="nav-link" style="color: aliceblue;">Shop</a></li>
+                <li><a href="cart.html" class="nav-link" style="color: aliceblue;">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="contact.html" class="nav-link" style="color: aliceblue;">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Header -->
+    <section class="checkout-header">
+        <div class="container">
+            <h1>Checkout</h1>
+            <p>Complete your order</p>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-content">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="checkout-items" id="checkout-items">
+                        <!-- Items will be populated by JavaScript -->
+                    </div>
+                    <div class="order-total">
+                        <div class="total-row">
+                            <span>Total Items:</span>
+                            <span id="checkout-total-items">0</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Total Weight:</span>
+                            <span id="checkout-total-weight">0 kg</span>
+                        </div>
+                        <div class="total-row final-total">
+                            <span>Total Amount:</span>
+                            <span id="checkout-total-amount">₹0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Information -->
+                <div class="customer-info">
+                    <h3>Customer Information</h3>
+                    <form id="checkout-form" class="checkout-form">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name *</label>
+                            <input type="text" id="customer-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number *</label>
+                            <input type="tel" id="customer-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-address">Delivery Address *</label>
+                            <textarea id="customer-address" name="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-time">Preferred Delivery Time</label>
+                            <select id="delivery-time" name="deliveryTime">
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                <option value="evening">Evening (4 PM - 8 PM)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-instructions">Special Instructions</label>
+                            <textarea id="special-instructions" name="instructions" rows="2" placeholder="Any special requirements or notes..."></textarea>
+                        </div>
+                        <button type="submit" class="place-order-button">
+                            <span>Place Order via WhatsApp</span>
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OceanFresh</h3>
+                    <p>Premium quality sea fish delivered fresh to your doorstep</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/9629864883" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: aliceblue;">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" style="color: aliceblue;">Home</a></li>
+                        <li><a href="shop.html" style="color: aliceblue;">Shop</a></li>
+                        <li><a href="contact.html" style="color: aliceblue;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p style="color: aliceblue;"><i class="fas fa-phone"></i> 9629864883</p>
+                    <p style="color: aliceblue;"><i class="fas fa-envelope"></i> kaleela276@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: aliceblue;">&copy; 2025 OceanFresh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Order Placed Successfully!</h3>
+            <p>Your order has been sent via WhatsApp. We'll contact you shortly to confirm the details.</p>
+            <button onclick="closeSuccessModal()" class="cta-button">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>

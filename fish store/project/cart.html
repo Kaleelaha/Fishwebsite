@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - OceanFresh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-fish"></i>
+                <span style="color: aliceblue;" style="color: aliceblue;">OceanFresh</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link " style="color: aliceblue;" style="color: aliceblue;">Home</a></li>
+                <li><a href="shop.html" class="nav-link" style="color: aliceblue;" style="color: aliceblue;">Shop</a></li>
+                <li><a href="cart.html" class="nav-link active" style="color: aliceblue;" style="color: aliceblue;">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="contact.html" class="nav-link" style="color: aliceblue;" style="color: aliceblue;">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Header -->
+    <section class="cart-header">
+        <div class="container">
+            <h1 >Your Cart</h1>
+            <p style="color: aliceblue;">Review your selected items</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-content">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be populated by JavaScript -->
+                </div>
+
+                <!-- Empty Cart Message -->
+                <div id="empty-cart" class="empty-cart" style="display: none;">
+                    <div class="empty-cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 style="color: aliceblue;">Your cart is empty</h3>
+                    <p>Add some fresh fish to get started!</p>
+                    <a href="shop.html" class="cta-button">
+                        <span>Continue Shopping</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Total Items:</span>
+                        <span id="total-items">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Weight:</span>
+                        <span id="total-weight">0 kg</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total Amount:</span>
+                        <span id="total-amount">₹0</span>
+                    </div>
+                    <button class="checkout-button" onclick="proceedToCheckout()">
+                        <span>Proceed to Checkout</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OceanFresh</h3>
+                    <p style="color: aliceblue;">Premium quality sea fish delivered fresh to your doorstep</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/9629864883" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" style="color: aliceblue;">Home</a></li>
+                        <li><a href="shop.html" style="color: aliceblue;">Shop</a></li>
+                        <li><a href="contact.html" style="color: aliceblue;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p style="color: aliceblue;"><i class="fas fa-phone"></i> 9629864883</p>
+                    <p style="color: aliceblue;"><i class="fas fa-envelope"></i> kaleela276@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: aliceblue;">&copy; 2025 OceanFresh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Cart updated!</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>

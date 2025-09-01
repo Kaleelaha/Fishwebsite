@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanFresh - Premium Sea Fish</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="color: aliceblue;">
+        <div class="nav-container" style="color: aliceblue;">
+            <div class="logo">
+                <i class="fas fa-fish"></i>
+                <span style="color: aliceblue;">OceanFresh</span>
+            </div>
+            <ul class="nav-menu" style="color: aliceblue;">
+                <li><a href="index.html" class="nav-link active" style="color: aliceblue;">Home</a></li>
+                <li><a href="shop.html" class="nav-link" style="color: aliceblue;" >Shop</a></li>
+                <li><a href="cart.html" class="nav-link" style="color: aliceblue;">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="contact.html" class="nav-link" style="color: aliceblue;">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="https://player.vimeo.com/external/373266689.sd.mp4?s=5c23d4f41e31e6acaa3d8eed8c8ab6a2e5e8c5e2&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Fresh Sea Fish</h1>
+            <p class="hero-subtitle" style="color: aliceblue;">Premium quality fish delivered fresh from the ocean to your doorstep</p>
+            <a href="shop.html" class="cta-button">
+                <span>Shop Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="floating-elements">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+            <div class="bubble bubble-5"></div>
+        </div>
+    </section>
+
+    <!-- Featured Fish Section -->
+    <!-- <section class="featured-fish">
+        <div class="container">
+            <h2 class="section-title" style="color: aliceblue;">Featured Fresh Fish</h2>
+            <div class="fish-grid" id="featured-fish-grid">
+                <!-- Fish cards will be populated by JavaScript -->
+            <!-- </div>
+        </div>
+    </section> -->
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Fresh from Ocean</h3>
+                    <p style="color: aliceblue;">Directly sourced from deep sea waters</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p style="color: aliceblue;">Same day delivery to keep freshness</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Quality Assured</h3>
+                    <p style="color: aliceblue;">Premium quality guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OceanFresh</h3>
+                    <p style="color: aliceblue;">Premium quality sea fish delivered fresh to your doorstep</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/9629864883" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" style="color: aliceblue;">Home</a></li>
+                        <li><a href="shop.html" style="color: aliceblue;">Shop</a></li>
+                        <li><a href="contact.html" style="color: aliceblue;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p style="color: aliceblue;"><i class="fas fa-phone" style="color: aliceblue;"></i > 9629864883</p>
+                    <p style="color: aliceblue;"><i class="fas fa-envelope" style="color: aliceblue;"></i> kaleela276@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: aliceblue;">&copy; 2025 OceanFresh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="home.js"></script>
